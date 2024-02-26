@@ -3,6 +3,8 @@ package org.example;
 import java.util.Scanner;
 
 public class ContaBancaria {
+//foi substituída por classe Programm
+
 
     private static String nomeTitular;
 
@@ -35,7 +37,7 @@ public class ContaBancaria {
                     char dep;
                     dep = sc.next().charAt(0);
                     if(dep == 's'){
-                        System.out.print("Informe um valor para o depósito: ");
+                        System.out.println("Informe um valor para o depósito: ");
                         cc.depositar(sc.nextDouble());
                     }
 
@@ -69,12 +71,14 @@ public class ContaBancaria {
 
     public static void exibirDadosContaCorrente(int numConta, double saldo) {
         System.out.println("=================================================================");
-        System.out.printf("Dados da conta corrente: %nConta: " +
-                        "%d%nNome do Titular: " +
-                        "%s%nSaldo: %.2f%n",
+        System.out.printf("Dados da conta corrente %n" +
+                        "Conta:                  " +
+                        "%d%nNome do Titular:        " +
+                        "%s%nSaldo:                  %.2f%n",
                 numConta, nomeTitular, saldo);
         System.out.println("=================================================================");
         System.out.println();
     }
 
 }
+
