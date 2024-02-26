@@ -1,31 +1,52 @@
 package org.example;
 
 public class ContaCorrente {
-    public int numConta;
+    private int numConta;
+    private String nomeTitular;
     private double saldo;
-    //    public String nomeTitular;
-    public final double TAXA = 5;
+    private final double TAXA = 5;
 
-    public double getSaldo() {
-        return saldo;
+
+    public ContaCorrente(int numConta, String nomeTitular) {
+        this.numConta=numConta;
+        this.nomeTitular=nomeTitular;
     }
 
-    public void setSaldoDeposito(double valor) {
+    public ContaCorrente(int numConta, String nomeTitular, double saldoInicial) {
+        this.numConta=numConta;
+        this.nomeTitular=nomeTitular;
+        depositar(saldoInicial);
+    }
+
+    public void depositar(double valor) {
         this.saldo += valor;
     }
 
-    public void setSaldoSaque(double valor) {
-
+    public void sacar(double valor) {
         this.saldo -= (valor + TAXA);
     }
 
-    public double depositar(double valor) {
-        setSaldoDeposito(valor);
-        return saldo;
-    }
 
-    public double sacar(double valor) {
-        setSaldoSaque(valor);
-        return saldo;
+
+    public String toString() {
+        return
+                "\n"
+                        +"================================================="
+                        +"\n"
+                        +"Dados da conta corrente "
+                        +"\n"
+                        +"Número:                 "
+                        +numConta
+                        +"\n"
+                        +"Nome do Titular:        "
+                        +nomeTitular
+                        +"\n"
+                        +"Saldo:                  "
+                        + String.format("%.2f", saldo)
+                        +"\n"
+                        +"================================================="
+                        +"\n";
     }
 }
+
+
