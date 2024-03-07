@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.example</groupId>
-    <artifactId>RascunhoDeExercicios</artifactId>
+    <artifactId>Cap10_Arrays_Listas</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <properties>
