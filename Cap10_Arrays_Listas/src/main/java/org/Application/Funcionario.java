@@ -12,7 +12,7 @@ public class Funcionario {
     }
 
     public void aumentar(Double percentual) {
-        this.salario *= 1+percentual;
+        this.salario *= 1+percentual/100;
     }
 
     public String toString() {
