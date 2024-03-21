@@ -17,32 +17,57 @@ public class Program {
 
         Scanner sc = new Scanner(System.in);
 
-        int n, id;
+        int n, id, indiceID;
         String nome;
-        char op;
-        double salario;
+        double salarioHoje, novoSalario, percentualSalario;
 
         System.out.println("Informe a quantidade de funcionários a atualizar");
         n = sc.nextInt();
 
+        List<Integer> listaId= new ArrayList<>();
+        List<String> listaNome= new ArrayList<>();
+        List<Double> listaSalario= new ArrayList<>();
 
-        System.out.println("Informe o ID do funcionário");
-        id = sc.nextInt();
-        System.out.println("Informe o Nome do funcionário");
-        nome = sc.next();
-        System.out.println("Informe o Salário do funcionário");
-        salario = sc.nextDouble();
-        Funcionario fc = new Funcionario(id,nome,salario);
-        System.out.print(fc);
-
-        System.out.println("Deseja aumentar o salário de um funcionário? s/n");
-        op=sc.next().charAt(0);
-        if(op == 's'){
-            System.out.println("Informe um percentual de aumento: ");
-            fc.aumentar(sc.nextDouble());
-            System.out.println(fc);
+        for(int i=0;i<n;i++){
+            System.out.println("Informe o ID do funcionário "+i);
+            listaId.add(sc.nextInt());
+            System.out.println("Informe o Nome do funcionário "+i);
+            listaNome.add(sc.next());
+            System.out.println("Informe o Salário do funcionário "+i);
+            listaSalario.add(sc.nextDouble());
         }
 
+        System.out.println("---------------------------");
+        System.out.println(listaSalario);
+
+        Funcionario fc = new Funcionario();
+
+        for (int i = 0; i < n; i++) {
+            System.out.println("Deseja aumentar o salário de algum funcionário? s/n");
+            char op = sc.next().charAt(0);
+            if(op == 's') {
+                System.out.println("Entre com o id do funcionário em que deseja aumentar o salário:");
+                id = sc.nextInt();
+                System.out.println("Informe um percentual de aumento: ");
+                percentualSalario = sc.nextDouble();
+
+                indiceID = listaId.indexOf(id); //Indice da lista do id
+
+                salarioHoje = listaSalario.get(indiceID); //valor do salario do indice
+
+                novoSalario = salarioHoje * (1 + (percentualSalario / 100));
+                listaSalario.set(indiceID,novoSalario);
+
+            }
+            else{
+                i=n;
+            }
+
+        }
+
+        System.out.println(listaId);
+        System.out.println(listaNome);
+        System.out.println(listaSalario);
 
         sc.close();
     }
