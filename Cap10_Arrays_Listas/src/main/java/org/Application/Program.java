@@ -7,42 +7,47 @@ Lembre-se de aplicar a técnica de encapsulamento para não permitir que o salá
 
 package org.Application;
 
+import org.Entities.FuncionarioListas;
+
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 import java.util.Scanner;
 import java.util.stream.Collectors;
 
 public class Program {
     public static void main(String[] args) {
 
+        Locale.setDefault(new Locale("pt", "BR") );
+//        Locale.setDefault(Locale.US);
+
         Scanner sc = new Scanner(System.in);
 
-        int n, id, indiceID;
-        String nome;
-        double salarioHoje, novoSalario, percentualSalario;
+        int n;
 
-        System.out.println("Informe a quantidade de funcionários a atualizar");
+        System.out.println("Informe a quantidade de funcionários a registrar:");
         n = sc.nextInt();
 
-        List<Integer> listaId= new ArrayList<>();
-        List<String> listaNome= new ArrayList<>();
-        List<Double> listaSalario= new ArrayList<>();
+        List<FuncionarioListas> listFun = new ArrayList<>();
 
         for(int i=0;i<n;i++){
-            System.out.println("Informe o ID do funcionário "+i);
-            listaId.add(sc.nextInt());
-            System.out.println("Informe o Nome do funcionário "+i);
-            listaNome.add(sc.next());
-            System.out.println("Informe o Salário do funcionário "+i);
-            listaSalario.add(sc.nextDouble());
+            System.out.println("Informe o ID do "+(i+1)+"º funcionário:");
+            Integer id = sc.nextInt();
+            System.out.println("Informe o Nome do "+(i+1)+"º funcionário:");
+            sc.nextLine();
+            String nome = sc.nextLine();
+            System.out.println("Informe o Salário do "+(i+1)+"º funcionário:");
+            Double salario = sc.nextDouble();
+
+            //Instancia o objeto com as variáveis utilizadas
+            FuncionarioListas fl = new FuncionarioListas(id, nome, salario);
+
+            //Insere à lista o objeto instanciado
+            listFun.add(fl);
         }
+//        System.out.println(listFun);
 
-        System.out.println("---------------------------");
-        System.out.println(listaSalario);
-
-        Funcionario fc = new Funcionario();
-
-        for (int i = 0; i < n; i++) {
+        /*for (int i = 0; i < n; i++) {
             System.out.println("Deseja aumentar o salário de algum funcionário? s/n");
             char op = sc.next().charAt(0);
             if(op == 's') {
@@ -51,7 +56,7 @@ public class Program {
                 System.out.println("Informe um percentual de aumento: ");
                 percentualSalario = sc.nextDouble();
 
-                indiceID = listaId.indexOf(id); //Indice da lista do id
+                indiceID = listFun.indexOf(id); //Indice da lista do id
 
                 salarioHoje = listaSalario.get(indiceID); //valor do salario do indice
 
@@ -61,13 +66,8 @@ public class Program {
             }
             else{
                 i=n;
-            }
+            }*/
 
-        }
-
-        System.out.println(listaId);
-        System.out.println(listaNome);
-        System.out.println(listaSalario);
 
         sc.close();
     }

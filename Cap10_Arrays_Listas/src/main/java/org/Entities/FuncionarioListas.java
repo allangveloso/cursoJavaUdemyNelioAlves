@@ -1,35 +1,35 @@
-package org.Application;
+package org.Entities;
 
-public class Funcionario {
-    int id;
-    String nome;
-    Double salario;
+public class FuncionarioListas {
 
-    /*public Funcionario(int id, String nome, Double salario) {
+    private int id;
+    private String nome;
+    private Double salario;
+
+    public FuncionarioListas() {
+    }
+
+    public FuncionarioListas(Integer id, String nome, Double salario) {
         this.id = id;
         this.nome = nome;
         this.salario = salario;
-    }*/
+    }
 
-    /*public void aumentar(Double percentual) {
-        return
-        this.salario *= 1+percentual/100;
-    }*/
+    public void  aumentarSalario(Double percentual) {
+                this.salario *= 1+percentual/100;
+    }
 
     public String toString() {
         return
                 "\n"
                         +"================================================="
                         +"\n"
-                        +"Dados dos funcionários "
+                        +"Lista de funcionários "
                         +"\n"
-                        +"Id:          "
                         +id
-                        +"\n"
-                        +"Nome:        "
+                        +", "
                         +nome
-                        +"\n"
-                        +"Salario:     "
+                        +", "
                         + String.format("%.2f", salario)
                         +"\n"
                         +"================================================="
