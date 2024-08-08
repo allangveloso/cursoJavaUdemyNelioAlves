@@ -66,7 +66,7 @@ public class Post {
         this.comments = comments;
     }*/
 
-    //Deve ser criar um método específico para add itens à lista existente
+    //Deve-se criar um método específico para add itens à lista existente
     public void addComment(Comment coment) {
         comments.add(coment);
     }
@@ -75,7 +75,7 @@ public class Post {
     }
 
     @Override
-    //usar o StringBuilder é melhor quando se tem uma+ string muito grande
+    //usar o StringBuilder é melhor quando se tem uma string muito grande
     public String toString() {
         StringBuilder sb = new StringBuilder();
                 sb.append(title+"\n");
@@ -86,6 +86,7 @@ public class Post {
                 for (Comment c : comments) {
                     sb.append(c.getText() + "\n");
                 };
+                sb.append("\n");
         //converte o sb para toString
         return sb.toString();
     }

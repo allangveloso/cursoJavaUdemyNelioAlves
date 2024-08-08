@@ -11,10 +11,6 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.*;
 
-/**
- * Hello world!
- *
- */
 public class App 
 {
     public static void main( String[] args ) throws ParseException {
@@ -26,7 +22,7 @@ public class App
         System.out.println("Enter worker name: ");
         System.out.print("Name: ");
         String workerName = sc.next();
-        System.out.print("Level: " + new ArrayList<WorkerLevel>(Arrays.asList(WorkerLevel.values()))+": ");
+        System.out.print("Choose a Level: " + new ArrayList<WorkerLevel>(Arrays.asList(WorkerLevel.values()))+": ");
 
         WorkerLevel workerLevel = WorkerLevel.valueOf(sc.next());
         System.out.print("Base salary: ");
