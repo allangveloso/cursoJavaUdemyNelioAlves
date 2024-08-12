@@ -4,9 +4,6 @@ import entities.Department;
 import entities.HourContract;
 import entities.Worker;
 import enums.WorkerLevel;
-
-import javax.naming.Name;
-import java.security.PrivateKey;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.*;
@@ -18,10 +15,10 @@ public class App
         SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 
         System.out.print("Enter department name: ");
-        Department department = new Department(sc.next());
+        Department department = new Department(sc.nextLine());
         System.out.println("Enter worker name: ");
         System.out.print("Name: ");
-        String workerName = sc.next();
+        String workerName = sc.nextLine();
         System.out.print("Choose a Level: " + new ArrayList<WorkerLevel>(Arrays.asList(WorkerLevel.values()))+": ");
 
         WorkerLevel workerLevel = WorkerLevel.valueOf(sc.next());
