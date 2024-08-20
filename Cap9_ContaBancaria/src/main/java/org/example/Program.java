@@ -4,15 +4,14 @@ import java.util.Scanner;
 
 public class Program {
 
-    private static String nomeTitular;
-
-    private static int numConta;
-    static double vlrDeposito;
-
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
         ContaCorrente cc=null;
+
+        String nomeTitular;
+        int numConta = 0;
+        double vlrDeposito=0;
 
         int op=1;
 
@@ -28,27 +27,30 @@ public class Program {
 
             switch (op) {
                 case 1:
-                    System.out.print("Informe o número da conta: ");
-                    numConta = sc.nextInt();
+                    //O número da conta é gerado aleatoriamente
+                    //System.out.print("Informe o número da conta: ");
+                    //numConta = sc.nextInt();
+                    sc.nextLine();
 
                     System.out.print("Informe um nome para o titular: ");
-                    nomeTitular = sc.next();
+                    nomeTitular = sc.nextLine();
 
                     System.out.print("Deseja realizar um depósito inicial? s/n: ");
                     char dep = sc.next().charAt(0);
                     if(dep == 's'){
-                        System.out.println("Informe um valor para o depósito: ");
+                        System.out.print("Informe um valor para o depósito: ");
                         vlrDeposito = sc.nextDouble();
-                        cc = new ContaCorrente(numConta, nomeTitular,vlrDeposito);
+                        cc = new ContaCorrente(nomeTitular,vlrDeposito);
                     }
                     else
-                        cc = new ContaCorrente(numConta, nomeTitular);
+                        cc = new ContaCorrente(nomeTitular);
                     System.out.println(cc);
                     break;
                 case 2:
                     System.out.print("Informe um novo nome para o titular: ");
-                    nomeTitular = sc.next();
-                    cc = new ContaCorrente(numConta, nomeTitular,vlrDeposito);
+                    sc.nextLine();
+                    nomeTitular = sc.nextLine();
+                    cc.setNomeTitular(nomeTitular);
                     System.out.println(cc);
                     break;
                 case 3:
