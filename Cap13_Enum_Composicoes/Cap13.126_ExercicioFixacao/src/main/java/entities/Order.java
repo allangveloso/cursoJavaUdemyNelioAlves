@@ -62,7 +62,7 @@ public class Order {
     public Double total(){
         double total =0;
         for (OrderItem item : items) {
-            total = item.subTotal();
+            total += item.subTotal();
         }
 
         return total;
