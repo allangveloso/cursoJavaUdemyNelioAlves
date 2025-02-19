@@ -6,7 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="Cap13_Enums_Composicoes_Ex1" />
+        <module name="Cap12_Enums_Composicoes_Ex1" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
