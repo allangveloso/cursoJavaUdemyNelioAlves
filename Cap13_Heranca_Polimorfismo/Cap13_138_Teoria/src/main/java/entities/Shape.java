@@ -22,9 +22,4 @@ public abstract class Shape {
 
     public abstract Double area();
 
-    @Override
-    public String toString() {
-        return
-                "color=" + color;
-    }
 }

@@ -36,4 +36,10 @@ public class Rectangle extends Shape{
     public Double area() {
         return width * height;
     }
+
+    @Override
+    public String toString() {
+        return "Rectangle";
+    }
+
 }
