@@ -4,24 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="83f7b95f-24c4-4568-b3d5-29c3c7e11d5a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../../Cap13_Heranca_Polimorfismo/Cap13_138_Teoria/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Cap13_Heranca_Polimorfismo/Cap13_138_Teoria/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Cap13_Heranca_Polimorfismo/Cap13_138_Teoria/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Cap13_Heranca_Polimorfismo/Cap13_138_Teoria/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Cap13_Heranca_Polimorfismo/Cap13_138_Teoria/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Cap13_Heranca_Polimorfismo/Cap13_138_Teoria/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Cap13_Heranca_Polimorfismo/Cap13_138_Teoria/src/ReadMe.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Cap13_Heranca_Polimorfismo/Cap13_138_Teoria/src/main/java/app/App.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Cap13_Heranca_Polimorfismo/Cap13_138_Teoria/src/main/java/entities/Circle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Cap13_Heranca_Polimorfismo/Cap13_138_Teoria/src/main/java/entities/Rectangle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Cap13_Heranca_Polimorfismo/Cap13_138_Teoria/src/main/java/entities/Shape.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Cap13_Heranca_Polimorfismo/Cap13_138_Teoria/src/main/java/enums/Color.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Cap13_Heranca_Polimorfismo/Cap13_138_Teoria/src/test/java/app/AppTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-    </list>
+    <list default="true" id="83f7b95f-24c4-4568-b3d5-29c3c7e11d5a" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -43,9 +26,9 @@
     "Application.Application.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "Cap13__139__ExercFixacao",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/allan/Java/cursoJavaUdemyNelioAlves/Cap12_Enum_Composicoes/Cap13.123_Exercicio_Resolvido_1",
+    "last_opened_file_path": "C:/Users/allan/Java/cursoJavaUdemyNelioAlves/Cap12_Enum_Composicoes/Cap13.125_Exercicio_Resolvido_2_StringBuilder",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2"
